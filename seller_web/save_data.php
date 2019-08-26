@@ -4,7 +4,6 @@
 	extract($_POST);
 	$sql_count = "select * from `seller_data`";
 	$result = $con -> query($sql_count);
-	$i = 0;
 	$row = mysqli_num_rows ($result);
 	$new_id = $row + 1;
 	if (!empty($_FILES['sell_item']))
