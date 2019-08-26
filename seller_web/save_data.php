@@ -2,20 +2,11 @@
 
 	require 'db_info.php';
 	extract($_POST);
-	$sql_count = "select * from `seller_data` order by `id` desc";
+	$sql_count = "select * from `seller_data`";
 	$result = $con -> query($sql_count);
 	$i = 0;
-	$prev_id = 0;
-	if($result->num_rows)
-	{
-		while(($row = $result->fetch_assoc()) && ($i<1))
-		{
-			$prev_id = $row['id'];
-			$i++;
-		}
-	}
-	$new_id = $prev_id + 1;
-	print_r($_FILES);
+	$row = mysqli_num_rows ($result);
+	$new_id = $row + 1;
 	if (!empty($_FILES['sell_item']))
 	{
 		if (($_FILES['sell_item']['type'] == 'image/jpeg') || ($_FILES['sell_item']['type'] == 'image/jpg') || ($_FILES['sell_item']['type'] == 'image/png')) 
@@ -27,5 +18,8 @@
 			$con -> query($sql);	
 		}
 	}
-
+	else
+	{
+		echo " No File Found ";
+	}
 ?>
