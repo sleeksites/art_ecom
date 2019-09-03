@@ -13,7 +13,7 @@
 			$target_dir = "sell_images/";
 			$target_file = $target_dir . $new_id . "img.jpg";
 			move_uploaded_file($_FILES['sell_item']['tmp_name'], $target_file);
-			$sql = "insert into `seller_data`(`seller_name`,`photo_links`) values ('$seller_name','$target_file');";
+			$sql = "insert into `seller_data`(`seller_name`,`category`,`photo_links`) values ('$seller_name','$category','$target_file');";
 			$con -> query($sql);	
 		}
 	}
