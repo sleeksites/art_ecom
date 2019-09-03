@@ -1,6 +1,10 @@
 <?php 
 extract($_POST);
 require 'db_info.php';
+if (empty($sort))
+{
+	$sort = "asc";
+}
 if (!empty($where)) 
 {
 	$sql = "select $column from `seller_data` where category='$where' order by `id` $sort";	
