@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2019 at 04:19 PM
+-- Generation Time: Sep 03, 2019 at 09:13 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -32,6 +32,7 @@ CREATE TABLE `seller_data` (
   `timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `id` int(11) NOT NULL,
   `seller_name` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
   `photo_links` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,11 +40,19 @@ CREATE TABLE `seller_data` (
 -- Dumping data for table `seller_data`
 --
 
-INSERT INTO `seller_data` (`timestamp`, `id`, `seller_name`, `photo_links`) VALUES
-('2019-08-25 14:02:32', 2, 'Jishant', 'sell_images/1img.jpg'),
-('2019-08-25 14:02:36', 3, 'Jishant', 'sell_images/3img.jpg'),
-('2019-08-25 14:02:39', 4, 'Jishant', 'sell_images/4img.jpg'),
-('2019-08-25 14:02:41', 5, 'Jishant', 'sell_images/5img.jpg');
+INSERT INTO `seller_data` (`timestamp`, `id`, `seller_name`, `category`, `photo_links`) VALUES
+('2019-09-03 06:45:01', 1, 'Jishant', 'abstract', 'sell_images/1img.jpg'),
+('2019-09-03 06:45:17', 2, 'Jishant', 'abstract', 'sell_images/2img.jpg'),
+('2019-09-03 06:45:24', 3, 'Jishant', 'abstract', 'sell_images/3img.jpg'),
+('2019-09-03 06:48:22', 4, 'Jishant', 'modern', 'sell_images/4img.jpg'),
+('2019-09-03 06:48:27', 5, 'Jishant', 'modern', 'sell_images/5img.jpg'),
+('2019-09-03 06:48:33', 6, 'Jishant', 'modern', 'sell_images/6img.jpg'),
+('2019-09-03 06:48:44', 7, 'Jishant', 'cubism', 'sell_images/7img.jpg'),
+('2019-09-03 06:48:57', 8, 'Jishant', 'cubism', 'sell_images/8img.jpg'),
+('2019-09-03 06:49:05', 9, 'Jishant', 'cubism', 'sell_images/9img.jpg'),
+('2019-09-03 06:49:12', 10, 'Jishant', 'expressionism', 'sell_images/10img.jpg'),
+('2019-09-03 06:49:22', 11, 'Jishant', 'expressionism', 'sell_images/11img.jpg'),
+('2019-09-03 06:49:27', 12, 'Jishant', 'expressionism', 'sell_images/12img.jpg');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +72,7 @@ ALTER TABLE `seller_data`
 -- AUTO_INCREMENT for table `seller_data`
 --
 ALTER TABLE `seller_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
