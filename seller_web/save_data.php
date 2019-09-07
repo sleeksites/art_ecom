@@ -30,6 +30,14 @@
 			$sql = "insert into `seller_data`(`seller_name`,`category`,`og_link`,`compressed_link`) values ('$seller_name','$category','$noncompressed_target_file','$compressed_target_file');";
 			$con -> query($sql);
 		}
+		else
+		{
+			?>
+			<script type="text/javascript">
+				alert("File Type error");
+			</script>
+			<?php
+		}
 	}
 	else
 	{
