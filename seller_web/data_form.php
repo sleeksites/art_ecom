@@ -13,6 +13,14 @@
 			box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.75);
 			padding: 10px;
 			border-radius: 10px;
+			background-color: white;
+		}
+		body
+		{
+			background: url(https://images.unsplash.com/photo-1565281356651-926255aa8036?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
+			background-position: center;
+			background-attachment: fixed;
+			background-size: cover;
 		}
 	</style>
 </head>
