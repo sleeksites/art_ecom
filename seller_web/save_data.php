@@ -60,7 +60,7 @@
 			$filename = $noncompressed_target_file;
 			list($width, $height, $type) = getimagesize($filename);
 			$old_image = load_image($filename, $type);
-			$new_image = resize_image(400, 400, $old_image, $width, $height);
+			$new_image = resize_image(500, 300, $old_image, $width, $height);
 			save_image($new_image,"compressed_data_images/".basename($filename), 'jpeg', 100);
 			$sql = "insert into `seller_data`(`seller_name`,`category`,`og_link`,`compressed_link`) values ('$seller_name','$category','$noncompressed_target_file','$compressed_target_file');";
 			$con -> query($sql);
