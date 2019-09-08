@@ -3,10 +3,11 @@
 <head>
 	<title>Input Page</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<style type="text/css">
 		.container
 		{
-			width: 60% !important;
+			width: 70% !important;
 			margin:auto;
 			-webkit-box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.75);
 			-moz-box-shadow: 0px 0px 15px 10px rgba(0,0,0,0.75);
@@ -21,6 +22,7 @@
 			background-position: center;
 			background-attachment: fixed;
 			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	</style>
 </head>
