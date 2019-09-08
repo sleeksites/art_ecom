@@ -1,3 +1,6 @@
+<?php 
+header("Access-Control-Allow-Origin: *");
+?>
 <?php
 require 'db_info.php';
 $sql = "select * from `seller_data`";
