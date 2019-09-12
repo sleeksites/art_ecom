@@ -1,5 +1,5 @@
 <?php 
-
+	session_start();
 	require 'db_info.php';
 	extract($_POST);
 	$sql_count = "select * from `seller_data`";
@@ -62,20 +62,19 @@
 			$old_image = load_image($filename, $type);
 			$new_image = resize_image(500, 300, $old_image, $width, $height);
 			save_image($new_image,"compressed_data_images/".basename($filename), 'jpeg', 100);
-			$sql = "insert into `seller_data`(`seller_name`,`category`,`og_link`,`compressed_link`) values ('$seller_name','$category','$noncompressed_target_file','$compressed_target_file');";
+			$_SESSION['title'] = $title;
+			$_SESSION['image'] = $compressed_target_file;
+			$sql = "insert into `seller_data`(`seller_name`,`title`,`description`,`price`,`init_quant`,`curr_quant`,`category`,`og_link`,`compressed_link`) values ('$seller_name','$title','$description','$price','$quantity','$quantity','$category','$noncompressed_target_file','$compressed_target_file');";
 			$con -> query($sql);
 		}
 		else
 		{
-			?>
-			<script type="text/javascript">
-				alert("File Type error");
-			</script>
-			<?php
+			echo "File type Error";
 		}
 	}
 	else
 	{
 		echo " No File Found ";
 	}
+	header("Location:product_added.php");
 ?>

@@ -42,13 +42,34 @@
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
 			<div class="form-group">
-				<select name="category" required class="form-control mb-2">
+				<input type="text" name="title" placeholder="Enter Product Title" required class="form-control mb-2">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
+			</div>
+			<div class="form-group">
+				<input type="text" name="description" placeholder="Enter Description" required class="form-control mb-2">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
+			</div>
+			<div class="form-group">
+				<input type="number" name="price" placeholder="Enter Price" required class="form-control mb-2">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
+			</div>
+			<div class="form-group">
+				<input type="number" name="quantity" required class="form-control mb-2" placeholder="Enter Initial Quantity">
+				<div class="valid-feedback">Valid.</div>
+				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
+			</div>
+			<div class="form-group">
+				<!-- <select name="category" required class="form-control mb-2">
 					<option selected disabled>Chose a category</option>
 					<option value="abstract">Abstract</option>
 					<option value="modern">Modern Art</option>
 					<option value="cubism">Cubism</option>
 					<option value="expressionism">Expressionism</option>
-				</select>
+				</select> -->
+				<div id="load"> <?php include 'category.php'; ?> </div>
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
@@ -58,5 +79,8 @@
 			<button class="btn btn-primary">Submit</button>
 		</form>
 	</div>
+	<br>
+		<br>
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </html>
