@@ -4,10 +4,8 @@
 	<title>TEST PAGE</title>
 </head>
 <body>
-	<form action="apitest.php" method="POST">
-		<input type="text" name="column">
-		<input type="text" name="where">
-		<input type="text" name="sort">
+	<form action="cartAPI.php" method="POST">
+		<input type="text" name="id">
 		<button>Submit</button>
 	</form>
 </body>

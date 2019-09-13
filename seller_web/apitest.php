@@ -1,4 +1,7 @@
 <?php 
+header("Access-Control-Allow-Origin: *");
+?>
+<?php 
 extract($_POST);
 require 'db_info.php';
 if (empty($sort))
@@ -8,6 +11,10 @@ if (empty($sort))
 if (!empty($where)) 
 {
 	$sql = "select $column from `seller_data` where category='$where' order by `id` $sort";	
+}
+if(!empty($where) && !empty($cond))
+{
+    $sql = "select $column from `seller_data` where $cond=$where";	
 }
 else
 {
