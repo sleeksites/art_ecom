@@ -33,10 +33,22 @@
 		}
 		$count++;
 	}
+	$count=0;
 	if ($flag) 
 	{
 		$new_sql = "INSERT INTO `orders`(`name`, `add_line_1`, `add_line_2`, `pincode`, `phone_number`, `email`) VALUES ('$name','$add_line_1','$add_line_2','$pincode','$phone_no','$email')";
 		$result = $con->query($new_sql);
+		foreach ($id_arr as $value_test) 
+		{
+			$sql = "select id,curr_quant from `seller_data` where `id`=$value_test";
+			$result = $con->query($sql);
+			$row = $result->fetch_assoc();
+			$new_quant = $row['curr_quant']-$quant_arr[$count];
+			echo $new_quant;
+			$update_sql = "update `seller_data` set `curr_quant` = $new_quant where `id`=$value_test";
+			$con -> query($update_sql);
+			$count++;
+		}
 		$sql_count = "select * from `orders`";
 		$result_count = $con -> query($sql_count);
 		$row = mysqli_num_rows ($result_count);
