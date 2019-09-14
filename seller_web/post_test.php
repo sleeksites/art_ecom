@@ -4,8 +4,9 @@
 	<title>TEST PAGE</title>
 </head>
 <body>
-	<form action="cartAPI.php" method="POST">
+	<form action="checkout.php" method="POST">
 		<input type="text" name="id">
+		<input type="text" name="quantity">
 		<button>Submit</button>
 	</form>
 </body>
