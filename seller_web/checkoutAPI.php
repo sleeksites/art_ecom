@@ -44,7 +44,6 @@
 			$result = $con->query($sql);
 			$row = $result->fetch_assoc();
 			$new_quant = $row['curr_quant']-$quant_arr[$count];
-			echo $new_quant;
 			$update_sql = "update `seller_data` set `curr_quant` = $new_quant where `id`=$value_test";
 			$con -> query($update_sql);
 			$count++;
