@@ -4,7 +4,35 @@
 <?php 
 	extract($_POST);
 	$flag=1;
-	if(empty($name) || empty($add_line_1) || empty($pincode) || empty($phone_no) || empty($email) || empty($order))
+	$data_arr = json_decode($_POST['data']);
+	foreach ($data_arr as $key => $value) 
+	{
+		if ($key == "fullName") 
+		{
+			$name = $value;
+		}
+		if ($key == "email") 
+		{
+			$email = $value;
+		}
+		if($key == "phone_no")
+		{
+			$phone_no = $value;
+		}
+		if($key == "add_line_1")
+		{
+			$add_line_1 = $value;
+		}
+		if($key == "add_line_2")
+		{
+			$add_line_2 = $value;
+		}
+		if ($key == "pincode")
+		{
+			$pincode = $value;
+		}
+	}
+	if(empty($name) || empty($add_line_1) || empty($pincode) || empty($phone_no) || empty($email) || empty($id_quant) || empty($data))
 	{
 		$flag = 0;
 	}
@@ -13,8 +41,8 @@
 		$add_line_2 = "NA";
 	}
 	require "db_info.php";
-	$arr = json_decode($_POST['order']);
-	foreach ($arr as $key => $value) 
+	$order_arr = json_decode($_POST['id_quant']);
+	foreach ($order_arr as $key => $value) 
 	{
 		$sql = "select id,curr_quant from `seller_data` where `id`=$key";
 		$result = $con->query($sql);
@@ -36,7 +64,7 @@
 	{
 		$new_sql = "INSERT INTO `orders`(`name`, `add_line_1`, `add_line_2`, `pincode`, `phone_number`, `email`) VALUES ('$name','$add_line_1','$add_line_2','$pincode','$phone_no','$email')";
 		$result = $con->query($new_sql);
-		foreach ($arr as $key => $value) 
+		foreach ($order_arr as $key => $value) 
 		{
 			$sql = "select id,curr_quant from `seller_data` where `id`=$key";
 			$result = $con->query($sql);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2019 at 11:02 PM
+-- Generation Time: Sep 16, 2019 at 10:26 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -91,18 +91,18 @@ CREATE TABLE `seller_data` (
 --
 
 INSERT INTO `seller_data` (`timestamp`, `id`, `seller_name`, `title`, `description`, `price`, `init_quant`, `curr_quant`, `category`, `og_link`, `compressed_link`) VALUES
-('2019-09-12 09:40:43', 1, 'Sheetal', 'The MF Hussain', 'This is the basic description ', 10, 10, 10, ' Sculpture ', 'sell_images/1img.jpeg', 'compressed_data_images/1img.jpeg'),
-('2019-09-12 09:41:19', 2, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Fine Art ', 'sell_images/2img.jpeg', 'compressed_data_images/2img.jpeg'),
-('2019-09-12 09:41:26', 3, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Fine Art ', 'sell_images/3img.jpeg', 'compressed_data_images/3img.jpeg'),
-('2019-09-12 09:41:33', 4, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Fine Art ', 'sell_images/4img.jpeg', 'compressed_data_images/4img.jpeg'),
-('2019-09-12 09:41:41', 5, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Visual Art ', 'sell_images/5img.jpeg', 'compressed_data_images/5img.jpeg'),
-('2019-09-12 09:41:49', 6, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Visual Art ', 'sell_images/6img.jpeg', 'compressed_data_images/6img.jpeg'),
-('2019-09-12 09:41:54', 7, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Corporate Art ', 'sell_images/7img.jpeg', 'compressed_data_images/7img.jpeg'),
-('2019-09-12 09:42:00', 8, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Corporate Art ', 'sell_images/8img.jpeg', 'compressed_data_images/8img.jpeg'),
-('2019-09-12 09:42:08', 9, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Applied Art ', 'sell_images/9img.jpeg', 'compressed_data_images/9img.jpeg'),
-('2019-09-12 09:42:18', 10, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Applied Art ', 'sell_images/10img.jpeg', 'compressed_data_images/10img.jpeg'),
-('2019-09-12 09:42:25', 11, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Art Gallery ', 'sell_images/11img.jpeg', 'compressed_data_images/11img.jpeg'),
-('2019-09-12 09:42:34', 12, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 10, ' Art Gallery ', 'sell_images/12img.jpeg', 'compressed_data_images/12img.jpeg');
+('2019-09-16 20:24:46', 1, 'Sheetal', 'The MF Hussain', 'This is the basic description ', 10, 10, 20, ' Sculpture ', 'sell_images/1img.jpeg', 'compressed_data_images/1img.jpeg'),
+('2019-09-16 20:07:05', 2, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Fine Art ', 'sell_images/2img.jpeg', 'compressed_data_images/2img.jpeg'),
+('2019-09-16 20:24:46', 3, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Fine Art ', 'sell_images/3img.jpeg', 'compressed_data_images/3img.jpeg'),
+('2019-09-16 20:24:46', 4, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Fine Art ', 'sell_images/4img.jpeg', 'compressed_data_images/4img.jpeg'),
+('2019-09-16 20:24:46', 5, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Visual Art ', 'sell_images/5img.jpeg', 'compressed_data_images/5img.jpeg'),
+('2019-09-16 20:07:05', 6, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Visual Art ', 'sell_images/6img.jpeg', 'compressed_data_images/6img.jpeg'),
+('2019-09-16 20:24:46', 7, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Corporate Art ', 'sell_images/7img.jpeg', 'compressed_data_images/7img.jpeg'),
+('2019-09-16 20:07:05', 8, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Corporate Art ', 'sell_images/8img.jpeg', 'compressed_data_images/8img.jpeg'),
+('2019-09-16 20:24:46', 9, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Applied Art ', 'sell_images/9img.jpeg', 'compressed_data_images/9img.jpeg'),
+('2019-09-16 20:24:46', 10, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Applied Art ', 'sell_images/10img.jpeg', 'compressed_data_images/10img.jpeg'),
+('2019-09-16 20:07:05', 11, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Art Gallery ', 'sell_images/11img.jpeg', 'compressed_data_images/11img.jpeg'),
+('2019-09-16 20:24:46', 12, 'Sheetal', 'The Other Hussain', 'Generic description', 5000, 10, 20, ' Art Gallery ', 'sell_images/12img.jpeg', 'compressed_data_images/12img.jpeg');
 
 --
 -- Indexes for dumped tables
