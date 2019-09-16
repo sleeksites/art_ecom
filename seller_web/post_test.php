@@ -4,9 +4,8 @@
 	<title>TEST PAGE</title>
 </head>
 <body>
-	<form action="checkout.php" method="POST">
-		<input type="text" name="id">
-		<input type="text" name="quantity">
+	<form action="checkoutAPI.php" method="POST">
+		<input type="text" name="order">
 		<button>Submit</button>
 	</form>
 </body>
