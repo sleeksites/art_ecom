@@ -4,6 +4,7 @@
 <?php 
 	extract($_POST);
 	$flag=1;
+	$id_quant = $_POST['id_quant'];
 	$data_arr = json_decode($_POST['data']);
 	foreach ($data_arr as $key => $value) 
 	{
@@ -62,7 +63,7 @@
 	}
 	if ($flag) 
 	{
-		$new_sql = "INSERT INTO `orders`(`name`, `add_line_1`, `add_line_2`, `pincode`, `phone_number`, `email`) VALUES ('$name','$add_line_1','$add_line_2','$pincode','$phone_no','$email')";
+		$new_sql = "INSERT INTO `orders`(`name`, `add_line_1`, `add_line_2`, `pincode`, `phone_number`, `email`,`id_quant`) VALUES ('$name','$add_line_1','$add_line_2','$pincode','$phone_no','$email','$id_quant')";
 		$result = $con->query($new_sql);
 		foreach ($order_arr as $key => $value) 
 		{

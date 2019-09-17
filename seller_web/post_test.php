@@ -5,7 +5,8 @@
 </head>
 <body>
 	<form action="checkoutAPI.php" method="POST">
-		<input type="text" name="order">
+		<input type="text" name="data">
+		<input type="text" name="id_quant">
 		<button>Submit</button>
 	</form>
 </body>
