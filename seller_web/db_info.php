@@ -5,7 +5,6 @@
 	$pwd = "CJh5BAiMSY";
 	$con = mysqli_connect($servername, $user, $pwd, $db_name);*/
  ?>
-
  <?php  
 	$servername = "localhost";
 	$db_name = "art_ecom";
