@@ -61,8 +61,9 @@
 			list($width, $height, $type) = getimagesize($filename);
 			$old_image = load_image($filename, $type);
 			$new_image = resize_image(500, 300, $old_image, $width, $height);
+			$email = $_SESSION['logged_in_user'];
 			save_image($new_image,"compressed_data_images/".basename($filename), 'jpeg', 100);
-			$sql = "INSERT INTO `image_db`(`seller_name`, `company_name`, `title`, `description`, `price`, `init_quant`, `curr_quant`, `category`, `og_link`, `compressed_link`) VALUES ('$seller_name','$company_name','$title','$description','$price','$quantity','$quantity','$category','$noncompressed_target_file','$compressed_target_file')";
+			$sql = "INSERT INTO `image_db`(`seller_name`, `company_name`, `title`, `description`, `price`, `init_quant`, `curr_quant`, `category`, `og_link`, `compressed_link`,`seller_email`) VALUES ('$seller_name','$company_name','$title','$description','$price','$quantity','$quantity','$category','$noncompressed_target_file','$compressed_target_file','$email')";
 			$con -> query($sql);
 			$_SESSION['file_saved'] = 1;
 			header("Location:./admin/index.php");

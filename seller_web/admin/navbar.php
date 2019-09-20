@@ -19,15 +19,25 @@
       </li>
 
       <!-- Divider -->
-      <!-- <hr class="sidebar-divider"> -->
+      <hr class="sidebar-divider">
 
       <!-- Heading -->
-      <!-- <div class="sidebar-heading">
-        Editing
-      </div> -->
-
+      <div class="sidebar-heading">
+        Current Products
+      </div>
+      <li class="nav-item">
+        <span>
+        <a class="nav-link collapsed" href="./images.php">Images</a></span>
+      </li>
+      <div class="sidebar-heading">
+        Current Orders
+      </div>
+      <li class="nav-item">
+        <span>
+        <a class="nav-link collapsed" href="./orders.php">Orders</a></span>
+      </li>
       <!-- Nav Item - Pages Collapse Menu -->
-      <!-- <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>Approve Products</span>
