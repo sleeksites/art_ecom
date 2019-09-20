@@ -21,7 +21,7 @@
                     <img src="https://images.unsplash.com/photo-1564749210719-3aafef9af5fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" action="add_user.php">
                         <h2>student registration form</h2>
                         <div class="form-row">
                             <div class="form-group">
@@ -40,12 +40,12 @@
                         <div class="form-radio">
                             <label for="gender" class="radio-label">Gender :</label>
                             <div class="form-radio-item">
-                                <input type="radio" name="gender" id="male" checked>
+                                <input type="radio" name="gender" id="male" checked value="male">
                                 <label for="male">Male</label>
                                 <span class="check"></span>
                             </div>
                             <div class="form-radio-item">
-                                <input type="radio" name="gender" id="female">
+                                <input type="radio" name="gender" id="female" value="female">
                                 <label for="female">Female</label>
                                 <span class="check"></span>
                             </div>
@@ -75,6 +75,10 @@
                         <div class="form-group">
                             <label for="email">Email ID :</label>
                             <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password :</label>
+                            <input type="password" name="pwd" id="pwd" />
                         </div>
                         <div class="form-submit">
                             <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />

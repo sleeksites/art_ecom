@@ -37,10 +37,26 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="login" class="nav-link">Login</a></li>
-	          <li class="nav-item cta cta-colored"><a href="signup" class="nav-link">Sign Up</a></li>
+            <?php 
+                if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1 || ($_SESSION['is_logged_in'] == 2)) )
+                {
+                    ?>
+                        <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                        <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
+                    <?php
+                }
+                else
+                {
+                    ?>
+                    <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                        <li class="nav-item cta mr-md-1"><a href="login" class="nav-link">Login</a></li>
+                        <li class="nav-item cta cta-colored"><a href="signup" class="nav-link">Sign Up</a></li>
+                    <?php  
+                }
+            ?>
+	          
 	        </ul>
 	      </div>
 	    </div>
