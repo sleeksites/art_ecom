@@ -36,7 +36,7 @@
       <div class="container-fluid px-md-4 ">
         <a class="navbar-brand" href="index.php">Art-Kart</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
+          <span class="oi oi-menu"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -46,7 +46,7 @@
                 if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1) )
                 {
                     ?>
-                        <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+                        <li class="nav-item active" style="color: black;"><a href="index.php" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
                         <li class="nav-item"><a href="admin" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
                         <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
@@ -57,8 +57,8 @@
                     ?>
                     <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-                        <li class="nav-item cta mr-md-1"><a href="login" class="nav-link">Login</a></li>
-                        <li class="nav-item cta cta-colored"><a href="signup" class="nav-link">Sign Up</a></li>
+                        <li class="nav-item cta mr-md-1 mb-4"><a href="login" class="nav-link">Login</a></li>
+                        <li class="nav-item cta cta-colored mb-4"><a href="signup" class="nav-link">Sign Up</a></li>
                     <?php  
                 }
             ?>
