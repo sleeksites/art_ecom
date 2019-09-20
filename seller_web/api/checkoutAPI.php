@@ -46,7 +46,7 @@
 	$quant_arr = array();
 	foreach ($order_arr as $key => $value) 
 	{
-		$sql = "select id,curr_quant from `seller_data` where `id`=$key";
+		$sql = "select id,curr_quant from `image_db` where `id`=$key";
 		$result = $con->query($sql);
 		if($result->num_rows>0)
 		{
@@ -72,11 +72,11 @@
 		$result = $con->query($new_sql);
 		foreach ($order_arr as $key => $value) 
 		{
-			$sql = "select id,curr_quant from `seller_data` where `id`=$key";
+			$sql = "select id,curr_quant from `image_db` where `id`=$key";
 			$result = $con->query($sql);
 			$row = $result->fetch_assoc();
 			$new_quant = $row['curr_quant']-$value;
-			$update_sql = "update `seller_data` set `curr_quant` = $new_quant where `id`=$key";
+			$update_sql = "update `image_db` set `curr_quant` = $new_quant where `id`=$key";
 			$con -> query($update_sql);
 		}
 		$sql_count = "select * from `orders`";
