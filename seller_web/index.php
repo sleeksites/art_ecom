@@ -48,7 +48,7 @@
                     ?>
                         <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="# " class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
+                        <li class="nav-item"><a href="admin" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
                         <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
                     <?php
                 }

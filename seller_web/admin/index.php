@@ -17,7 +17,7 @@ if (!isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] != 1))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Delta Admin Panel</title>
+  <title>Art-Kart Admin Panel</title>
   <link rel="icon" href="../logo.jpeg" type="image/jpeg" sizes="16x16">
 
   <!-- Custom fonts for this template-->

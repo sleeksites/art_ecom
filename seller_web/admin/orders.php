@@ -47,7 +47,7 @@ $email = $_SESSION['logged_in_user'];
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container">
           <h1>The Products Currently Ordered</h1>
           <div class="row">
           <br>
@@ -74,7 +74,16 @@ $email = $_SESSION['logged_in_user'];
             {
               while($row = $result->fetch_assoc())
               {
+                $count = 0;
+                $ids = json_decode($row['art_id']);
+                foreach ($ids as $value) 
+                {
+                    $sql = "select id,seller_email from `image_db` where `id`=$value && `seller_email`='$email'";
+                    $inner_result = $con -> query($sql);
+                    if($inner_result->num_rows > 0 )
+                    {
                 ?>
+
                   <tr>
                     <td><?php echo $row['timestamp']; ?></td>
                     <td><?php echo $row['id'] ?></td>
@@ -84,11 +93,20 @@ $email = $_SESSION['logged_in_user'];
                     <td><?php echo $row['pincode'] ?></td>
                     <td><?php echo $row['phone_number'] ?></td>
                     <td><?php echo $row['email'] ?></td>
-                    <td><?php echo $row['art_id'] ?></td>
-                    <td><?php echo $row['quant'] ?></td>
-
+                    <td><?php
+                          $sql = "select og_link from `image_db` where `id`=$value";
+                          $one_res = $con->query($sql);
+                          $one_row = $one_res->fetch_assoc();
+                         ?>
+                         <img src="<?php echo "../".$one_row['og_link'] ?>" width="100%">    
+                      </td>
+                    <td><?php $quants = json_decode($row['quant']);
+                          echo $quants[$count]; ?></td>
                   </tr>
                 <?php
+              }
+              $count++;
+              }
               }
             }
             else
@@ -99,6 +117,22 @@ $email = $_SESSION['logged_in_user'];
             }
           ?>
           </tbody>
+          <tfoot>
+            <thead>
+              <tr>
+                <th>Timestamp</th>
+                <th>#</th>
+                <th>Name</th>
+                <th>Address 1</th>
+                <th>Address 2</th>
+                <th>Pincode</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Art-Id</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+          </tfoot>
           </table>
           </div>
           <!-- Page Heading -->

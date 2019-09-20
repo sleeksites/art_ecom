@@ -44,8 +44,9 @@
 	$order_arr = json_decode($_POST['id_quant']);
 	$id_arr = array();
 	$quant_arr = array();
+
 	foreach ($order_arr as $key => $value) 
-	{
+	{}
 		$sql = "select id,curr_quant from `image_db` where `id`=$key";
 		$result = $con->query($sql);
 		if($result->num_rows>0)
