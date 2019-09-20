@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    require 'db_info.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +43,7 @@
           <ul class="navbar-nav ml-auto">
             <?php 
 
-                if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1 || ($_SESSION['is_logged_in'] == 2)) )
+                if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1) )
                 {
                     ?>
                         <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
@@ -65,26 +68,6 @@
       </div>
     </nav>
     <!-- END nav -->
-    <?php 
-      if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == 1)
-      {
-        ?>
-        <script type="text/javascript">
-          alert("Login Successful");
-        </script>
-        <?php
-        $_SESSION['is_logged_in'] = 2;
-      }
-      else if(isset($_SESSION['login_error']) && $_SESSION['login_error'] == 1)
-      {
-        ?>
-          <script type="text/javascript">
-          alert("Login error");
-        </script>
-        <?php
-        $_SESSION['login_error'] = 0;
-      }
-    ?>
     <div class="hero-wrap img" style="background-image: url(https://images.unsplash.com/photo-1564934304050-e9bb87a29c13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
       <div class="overlay"></div>
       <div class="container">
@@ -144,8 +127,8 @@
     	<div class="container">
     		<div class="row justify-content-center pb-3">
           <div class="col-md-10 heading-section heading-section-white text-center ftco-animate">
-          	<span class="subheading">Candidates</span>
-            <h2 class="mb-4">Latest Candidates</h2>
+          	<span class="subheading">Art</span>
+            <h2 class="mb-4">Latest Art</h2>
           </div>
         </div>
     	</div>
@@ -153,48 +136,25 @@
         <div class="row">
         	<div class="col-md-12 ftco-animate">
         		<div class="carousel-candidates owl-carousel">
-        			<div class="item">
-		        		<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/1img.jpeg);"></div>
-		        			<h2>Danica Lewis</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-        			</div>
-        			<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/2img.jpeg);"></div>
-		        			<h2>Nicole Simon</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/3img.jpeg);"></div>
-		        			<h2>Cloe Meyer</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/4img.jpeg);"></div>
-		        			<h2>Rachel Clinton</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/5img.jpeg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
-	        		<div class="item">
-	        			<a href="#" class="team text-center">
-		        			<div class="img" style="background-image: url(sell_images/6img.jpeg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
-		        		</a>
-	        		</div>
+                <?php 
+                  $sql = "select * from image_db order by `id` desc";
+                  $result = $con -> query($sql);
+                  if ($result->num_rows > 0) 
+                  {
+                    while ($row = $result->fetch_assoc()) 
+                    {
+                       ?>
+                       <div class="item">
+                          <a href="#" class="team text-center">
+                          <div class="img" style="background-image: url(<?php echo $row['og_link']; ?>);"></div>
+                          <h2><?php echo $row['title'] ?></h2>
+                          <span class="position"><?php echo $row['company_name'] ?></span>
+                        </a>
+                        </div>
+                       <?php 
+                    }
+                  }
+                ?>        			
         		</div>
         	</div>
         </div>

@@ -10,11 +10,13 @@
 	{
 		$_SESSION['is_logged_in'] = 1;
 		$_SESSION['logged_in_user'] = $email;
-		header("Location:../index.php");
+		/*echo "Success";*/
+		header("Location:../admin");
 	}
 	else
 	{
 		$_SESSION['login_error'] = 1;
+		/*echo "Error";*/
 		header("Location:index.php");
 	}
 ?>
