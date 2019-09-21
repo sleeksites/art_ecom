@@ -19,50 +19,45 @@ if(!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in']!=1)
 	<div class="container">
 		<br>
 		<form method="post" action="../save_data.php" enctype="multipart/form-data" class="was-validated">
-			<div class="form-group">
+			<div class="row">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="text" name="company_name" placeholder="Enter Company Name" required class="form-control mb-2">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="text" name="seller_name" placeholder="Enter Name" required class="form-control mb-2">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="text" name="title" placeholder="Enter Product Title" required class="form-control mb-2">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="text" name="description" placeholder="Enter Description" required class="form-control mb-2">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="number" name="price" placeholder="Enter Price" required class="form-control mb-2">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="number" name="quantity" required class="form-control mb-2" placeholder="Enter Initial Quantity">
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
-				<!-- <select name="category" required class="form-control mb-2">
-					<option selected disabled>Chose a category</option>
-					<option value="abstract">Abstract</option>
-					<option value="modern">Modern Art</option>
-					<option value="cubism">Cubism</option>
-					<option value="expressionism">Expressionism</option>
-				</select> -->
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<div id="load"> <?php include 'category.php'; ?> </div>
 				<div class="valid-feedback">Valid.</div>
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
-			<div class="form-group">
+			<div class="form-group col-lg-4 col-md-6 mb-3">
 				<input type="file" name="sell_item" required class="form-control mb-2">
+			</div>
 			</div>
 			<button class="btn btn-primary">Submit</button>
 		</form>
