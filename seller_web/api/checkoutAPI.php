@@ -4,6 +4,8 @@
 <?php 
 	extract($_POST);
 	$flag=1;
+	if(!isset($_POST['data']))
+	{$flag=0;}
 	$data_arr = json_decode($_POST['data']);
 	foreach ($data_arr as $key => $value) 
 	{
@@ -46,7 +48,7 @@
 	$quant_arr = array();
 
 	foreach ($order_arr as $key => $value) 
-	{}
+	{
 		$sql = "select id,curr_quant from `image_db` where `id`=$key";
 		$result = $con->query($sql);
 		if($result->num_rows>0)
