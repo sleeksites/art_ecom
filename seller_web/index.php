@@ -137,7 +137,7 @@
         	<div class="col-md-12 ftco-animate">
         		<div class="carousel-candidates owl-carousel">
                 <?php 
-                  $sql = "select * from image_db order by `id` desc";
+                  $sql = "select * from image_db";
                   $result = $con -> query($sql);
                   if ($result->num_rows > 0) 
                   {

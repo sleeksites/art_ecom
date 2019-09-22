@@ -52,7 +52,7 @@ $email = $_SESSION['logged_in_user'];
           <h1>The Products Currently for Sale</h1>
           <div class="row">
           <br>
-          <table class="table table-condensed table-hover" id="order_table">
+          <table class="table table-condensed table-responsive table-hover" id="order_table">
             <thead>
               <tr>
                 <th>Timestamp</th>
