@@ -16,6 +16,15 @@ $email = $_SESSION['logged_in_user'];
     {
       padding:10px;
     }
+    #order_table_wrapper
+    {
+      width:80vw !important;
+    }
+    body
+    {
+      height:90vh !important;
+      overflow: scroll;
+    }
   </style>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

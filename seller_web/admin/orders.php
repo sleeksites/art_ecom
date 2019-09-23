@@ -16,6 +16,15 @@ $email = $_SESSION['logged_in_user'];
     {
       padding:10px;
     }
+    #order_table_wrapper
+    {
+      width:80vw !important;
+    }
+    body
+    {
+      height:90vh !important;
+      overflow: scroll;
+    }
   </style>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,6 +73,8 @@ $email = $_SESSION['logged_in_user'];
                 <th>Email</th>
                 <th>Art-Id</th>
                 <th>Quantity</th>
+                <th>Payment Status</th>
+                <th>Order Status</th>
               </tr>
             </thead>
             <tbody>
@@ -102,6 +113,15 @@ $email = $_SESSION['logged_in_user'];
                       </td>
                     <td><?php $quants = json_decode($row['quant']);
                           echo $quants[$count]; ?></td>
+                    <td><?php if($row['payment_status'])
+                              {echo "Paid";}
+                              else
+                              {echo "Not yet Paid";} ?> </td>
+                    <td><?php if($row['order_status'] == 1)
+                              {echo "Delivered";}
+                              elseif($row['order_status'] == 2)
+                              {echo "In Transit";}
+                              else{echo "Not Dispatched yet";} ?> </td>
                   </tr>
                 <?php
               }
@@ -185,3 +205,4 @@ $email = $_SESSION['logged_in_user'];
 </body>
 
 </html>
+
