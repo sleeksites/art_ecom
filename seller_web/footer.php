@@ -1,7 +1,7 @@
 <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
-        	<div class="col-md">
+        	<!-- <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Skillhunt Jobboard</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -48,15 +48,15 @@
                 <li><a href="#" class="pb-1 d-block">Checkout</a></li>
               </ul>
             </div>
-          </div>
+          </div> -->
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Shivaji Park, Mumbai</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9833528488</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">anilpakhare37@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
