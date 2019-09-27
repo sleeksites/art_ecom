@@ -22,7 +22,7 @@
                 </div>
                 <div class="signup-form">
                     <form method="POST" class="register-form" id="register-form" action="add_user.php">
-                        <h2>student registration form</h2>
+                        <h2>seller registration form</h2>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">First Name :</label>
@@ -63,10 +63,6 @@
                                     <input type="text" name="city">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="birth_date">DOB :</label>
-                            <input type="date" name="birth_date" id="birth_date">
                         </div>
                         <div class="form-group">
                             <label for="pincode">Pincode :</label>

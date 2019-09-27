@@ -47,7 +47,7 @@
                 {
                     ?>
                         <li class="nav-item active" style="color: black;"><a href="index.php" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="admin" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
+                        <li class="nav-item"><a href="admin/" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
                         <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
                     <?php
                 }
@@ -55,8 +55,8 @@
                 {
                     ?>
                     <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-                        <li class="nav-item cta mr-md-1 mb-4"><a href="login" class="nav-link">Login</a></li>
-                        <li class="nav-item cta cta-colored mb-4"><a href="signup" class="nav-link">Sign Up</a></li>
+                        <li class="nav-item cta mr-md-1 mb-4"><a href="login/" class="nav-link">Login</a></li>
+                        <li class="nav-item cta cta-colored mb-4"><a href="signup/" class="nav-link">Sign Up</a></li>
                     <?php  
                 }
             ?>
@@ -135,7 +135,7 @@
           <div class="col-md-12 ftco-animate">
             <div class="carousel-candidates owl-carousel">
                 <?php 
-                  $sql = "select * from image_db";
+                  $sql = "select * from `category_table`";
                   $result = $con -> query($sql);
                   if ($result->num_rows > 0) 
                   {
@@ -145,8 +145,7 @@
                        <div class="item">
                           <a href="#" class="team text-center">
                           <div class="img" style="background-image: url(<?php echo $row['og_link']; ?>);"></div>
-                          <h2><?php echo $row['title'] ?></h2>
-                          <span class="position"><?php echo $row['company_name'] ?></span>
+                          <h3 style="color: white;"> <?php echo $row['category']; ?> </h3>
                         </a>
                         </div>
                        <?php 

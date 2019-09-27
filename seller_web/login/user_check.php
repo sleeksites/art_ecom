@@ -11,7 +11,7 @@
 		$_SESSION['is_logged_in'] = 1;
 		$_SESSION['logged_in_user'] = $email;
 		/*echo "Success";*/
-		header("Location:../admin");
+		header("Location:../admin/");
 	}
 	else
 	{
