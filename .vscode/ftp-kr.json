@@ -1,0 +1,16 @@
+{
+    "host": "files.000webhost.com",
+    "username": "repressing-shares",
+    "password": "Jish@nt07",
+    "remotePath": "public_html/art_ecom/",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

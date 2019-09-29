@@ -11,7 +11,7 @@ if($result->num_rows>0)
 	while($row = $result->fetch_assoc())
 	{	
 ?>
-	<option value=" <?php echo $row['category'] ?> "><?php echo $row['category'] ?></option>
+	<option value=" <?php echo $row['id'] ?> "><?php echo $row['category'] ?></option>
 <?php 
 	}
 	?>
