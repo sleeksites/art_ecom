@@ -36,7 +36,7 @@ $email = $_SESSION['logged_in_user'];
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Delta Admin Panel</title>
+  <title>Art-Kart Admin Panel</title>
   <link rel="icon" href="../logo.jpeg" type="image/jpeg" sizes="16x16">
 
   <!-- Custom fonts for this template-->

@@ -36,7 +36,7 @@ $email = $_SESSION['logged_in_user'];
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Delta Admin Panel</title>
+  <title>Art-Kart Admin Panel</title>
   <link rel="icon" href="../logo.jpeg" type="image/jpeg" sizes="16x16">
 
   <!-- Custom fonts for this template-->
@@ -103,7 +103,15 @@ $email = $_SESSION['logged_in_user'];
                     <td>
                          <img src="<?php echo "../".$row['og_link'] ?>" width="100%">    
                       </td>
-                    <td><?php echo $row['category']?></td>
+                      <td>
+                      <?php $category = $row['category']; ?>
+                      <?php 
+                          $sel_sql = "select category from `category_table` where `id`='$category'";
+                          $internal_result = $con -> query($sel_sql);
+                          $internal_row = $internal_result->fetch_assoc();
+                          echo $internal_row['category'];
+                      ?>
+                    </td>
                   </tr>
                 <?php
               }
