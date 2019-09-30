@@ -17,5 +17,9 @@
 		$con -> query($insert_sql);
 		$_SESSION['user_added'] = 1;
 	}
-	header("Location:../login/");
+	?>
+		<script>
+		window.location="login/";
+		</script>
+	<?php
 ?>	
