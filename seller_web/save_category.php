@@ -16,11 +16,11 @@ if (!empty($_FILES['category_image']))
 	}
 	else
 	{
-		echo "File type error";
+		$_SESSION['file_type_error'] = 1;
 	}
 }
 else
 {
-	echo "No File Found";
+	$_SESSION['no_file'] = 1;
 }
 ?>

@@ -76,6 +76,7 @@
 	}
 	else
 	{
-		echo " No File Found ";
+		$_SESSION['file_type_error'] = 1;
+		header("Location:./admin/index.php");
 	}
 ?>

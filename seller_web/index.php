@@ -79,48 +79,6 @@
 	    	</div>
       </div>
     </div>
-<!--     <section class="ftco-section services-section">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-resume"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-team"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Easy To Manage Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-career"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Top Careers</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-employees"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Expert Candidates</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section class="ftco-section ftco-candidates bg-primary">
       <div class="container">
         <div class="row justify-content-center pb-3">
@@ -164,13 +122,10 @@
             <h2 class="h3">Contact Information</h2>
           </div>
           <div class="w-100"></div>
-          <div class="col-md-4">
-            <p><span>Address:</span>Shivaji Nagar Mumbai, Maharastra</p>
-          </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <p><span>Phone:</span> <a href="tel:+91 9833528488"></a>+91 9833528488</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <p><span>Email:</span> <a href="mailto:anilpakhare37@gmail.com">anilpakhare37@gmail.com</a></p>
           </div>
         </div>
@@ -195,9 +150,9 @@
             </form>
           
           </div>
-          <div class="col-md-6 d-flex" style="width:100%;">
+          <!-- <div class="col-md-6 d-flex" style="width:100%;">
               <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15083.852942107651!2d72.91443227144791!3d19.065353974260518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7c66ab9d46cd5%3A0x1468e9735fb0e69a!2sShivaji%20Nagar%2C%20Mumbai%2C%20Maharashtra!3m2!1d19.0641325!2d72.9240619!5e0!3m2!1sen!2sin!4v1569259207991!5m2!1sen!2sin" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>	

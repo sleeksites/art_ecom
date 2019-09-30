@@ -3,7 +3,7 @@
 require("./db_info.php");
 if(!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in']!=1)
 {
-  header("Location:../login");
+  header("Location:../login/");
 }
 ?>
 <!DOCTYPE html>
@@ -56,10 +56,7 @@ if(!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in']!=1)
 				<div class="invalid-feedback"><p>You cannot leave this empty</p></div>
 			</div>
 			<div class="form-group col-lg-4 col-md-6 mb-3">
-				<input type="file" name="sell_item[]" required class="form-control mb-2">
-			</div>
-			<div class="form-group col-lg-4 col-md-6 mb-3">
-				<input type="file" name="sell_item[]" required class="form-control mb-2">
+				<input type="file" name="sell_item" required class="form-control mb-2">
 			</div>
 			</div>
 			<button class="btn btn-primary">Submit</button>
