@@ -31,11 +31,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-bg-dark bg-light ftco-navbar-light" id="ftco-navbar">
       <div class="container-fluid px-md-4 ">
-        <a class="navbar-brand" href="index.php">Art-Kart</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" style="color:black !important;" href="index.php">Art-Kart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="color:black !important;">
           <span class="oi oi-menu"></span>
         </button>
 
@@ -46,7 +45,6 @@
                 if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1) )
                 {
                     ?>
-                        <li class="nav-item active" style="color: black;"><a href="index.php" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="admin/" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
                         <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
                     <?php
@@ -54,7 +52,6 @@
                 else
                 {
                     ?>
-                    <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
                         <li class="nav-item cta mr-md-1 mb-4"><a href="login/" class="nav-link">Login</a></li>
                         <li class="nav-item cta cta-colored mb-4"><a href="signup/" class="nav-link">Sign Up</a></li>
                     <?php  
@@ -65,21 +62,28 @@
         </div>
       </div>
     </nav>
-    <!-- END nav -->
-    <div class="hero-wrap img" style="background-image: url(https://images.unsplash.com/photo-1564934304050-e9bb87a29c13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
-      <div class="overlay"></div>
-      <div class="container">
-      	<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
-	        <div class="col-md-10 d-flex align-items-center ftco-animate">
-	        	<div class="text pt-5 mt-md-5" style="text-align:center;margin:auto;">
-	            <h1 class="mb-5 text-center" >"Find the Art, In your Kart"</h1>
-	            	<h3 class="mb-4">Find the Art you need for your Home</h3>
-	          </div>
-	        </div>
-	    	</div>
-      </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/masthead1.png" alt="First slide" style="max-height:600px;">
     </div>
-    <section class="ftco-section ftco-candidates bg-primary">
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/masthead2.jpeg" alt="Second slide" style="max-height:600px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/masthead3.jpeg" alt="Third slide" style="max-height:600px;">
+    </div>
+  </div>
+  <!--<a class="carousel-control-prev bg-dark" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
+  <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+  <!--  <span class="sr-only">Previous</span>-->
+  <!--</a>-->
+  <!--<a class="carousel-control-next bg-dark" href="#carouselExampleIndicators" role="button" data-slide="next">-->
+  <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+  <!--  <span class="sr-only">Next</span>-->
+  <!--</a>-->
+</div>
+    <section class="ftco-section ftco-candidates bg-primary" style="background:black !important;">
       <div class="container">
         <div class="row justify-content-center pb-3">
           <div class="col-md-10 heading-section heading-section-white text-center ftco-animate">
@@ -157,3 +161,8 @@
       </div>
     </section>	
 <?php include "footer.php" ?>
+<script>
+        $('.carousel').carousel({
+            interval:3000
+        });
+    </script>
