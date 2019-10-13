@@ -88,6 +88,7 @@ $email = "ADMIN"
                   <tr>
                     <td><?php echo $row['timestamp']; ?></td>
                     <td><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['name'] ?></td>
                     <td><?php echo $row['email'] ?></td>
                     <td><?php echo $row['phone_number'] ?></td>
                     <td><?php echo $row['req'] ?></td>

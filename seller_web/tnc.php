@@ -36,26 +36,34 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-          <?php 
-
-if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1) )
-{
-    ?>
-        <li class="nav-item"><a href="admin/" style="color:black;" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
-        <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
-    <?php
-}
-else
-{
-    ?>
-        <li class="nav-item cta mr-md-1 mb-4"><a href="login/" class="nav-link">Login</a></li>
-        <li class="nav-item cta cta-colored mb-4"><a href="signup/" class="nav-link">Sign Up</a></li>
-    <?php  
-}
-?>
 	          
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-12 ftco-animate text-center mb-5">
+          	<p class="breadcrumbs mb-0">Terms and Conditions</p>
+            <h1 class="mb-3 bread">Terms and Conditions</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<div class="container ftco-animate">
+	<br>
+	<br>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur voluptatum illum blanditiis quos ut obcaecati animi eius sapiente possimus aliquid, culpa pariatur nesciunt ullam. Nulla illum quod ex minus.
+		<br>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugiat accusamus magnam debitis, earum facilis quibusdam omnis quos vero officiis sequi tenetur, consequuntur saepe commodi fugit! Nostrum ad error veniam.
+		<br>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt id ad iste, dicta asperiores eos hic aliquid vitae consequuntur beatae mollitia aliquam laudantium, dignissimos in neque voluptas cumque. Hic, quidem!
+		</p>
+	</div>
+
+    <?php include "footer.php" ?>

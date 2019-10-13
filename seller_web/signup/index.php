@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up</title>
+    <style>
+        .container
+        {
+            width:80% !important;
+        }
+    </style>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -75,6 +81,10 @@
                         <div class="form-group">
                             <label for="password">Password :</label>
                             <input type="password" name="pwd" id="pwd" />
+                        </div>
+                        <div class="form-group" style="display:flex;">
+                        <input type="checkbox" id="check" required/>
+                        <label for="check">Accept the terms and conditions click <a href="../tnc.php">here</a> to read or check the box to move ahead</label>
                         </div>
                         <div class="form-submit">
                             <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />

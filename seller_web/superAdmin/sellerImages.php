@@ -62,7 +62,8 @@ $email = "ADMIN"
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="text-align: center;margin:auto;">
-          <h1></h1>
+        <?php $seller_email = $_GET['email']; ?>
+          <h1><?php echo $seller_email ?>'s Products</h1>
           <div class="row">
           <br>
           <table class="table table-condensed table-responsive table-hover" id="order_table">
@@ -83,7 +84,6 @@ $email = "ADMIN"
             </thead>
             <tbody>
           <?php 
-            $seller_email = $_GET['email'];
             $sql = "select * from `image_db` where seller_email='$seller_email'";
             $result = $con -> query($sql);
             if($result->num_rows > 0)

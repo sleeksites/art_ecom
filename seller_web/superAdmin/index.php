@@ -47,7 +47,7 @@ if (!isset($_SESSION['is_Admin']) && ($_SESSION['is_Admin'] != 1))
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Add Products</h1>
+            <h1 class="h3 mb-0 text-gray-800">Add Category</h1>
           </div>
           <?php if(isset($_SESSION['file_saved']) && $_SESSION['file_saved'] ==1) {?>
             <h5>File Saved</h5>
@@ -57,6 +57,7 @@ if (!isset($_SESSION['is_Admin']) && ($_SESSION['is_Admin'] != 1))
           <?php } ?>
           <!-- Content Row -->
           <div class="row">
+          <div class="col-lg-12"><?php include '../categoryform.php'?></div>
           </div>
           </div>
   </div>

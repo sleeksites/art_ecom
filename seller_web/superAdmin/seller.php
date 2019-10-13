@@ -99,7 +99,7 @@ $email = "ADMIN"
                     <td><?php echo $row['city'] ?></td>
                     <td><?php echo $row['pincode'] ?></td>
                     <td><?php echo $row['email'] ?></td>
-                    <td><a href="sellerImages.php?email=<?php echo $row['email']?>">See the products</a></td>
+                    <td><a href="sellerImages.php?email=<?php echo $row['email']?>">Products</a></td>
                   </tr>
                 <?php
               }

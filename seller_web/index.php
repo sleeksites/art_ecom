@@ -45,7 +45,7 @@
                 if (isset($_SESSION['is_logged_in']) && ($_SESSION['is_logged_in'] == 1) )
                 {
                     ?>
-                        <li class="nav-item"><a href="admin/" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
+                        <li class="nav-item"><a href="admin/" style="color:black;" class="nav-link"><?php echo$_SESSION['logged_in_user']; ?></a></li>
                         <li class="nav-item cta mr-md-1"><a href="logout.php" class="nav-link">Log Out!</a></li>
                     <?php
                 }
