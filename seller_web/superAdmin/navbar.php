@@ -31,6 +31,14 @@
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
+        Sellers
+      </div>
+      <li class="nav-item">
+        <span>
+        <a class="nav-link collapsed" href="seller.php">Seller Info</a></span>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
         Current Orders
       </div>
       <li class="nav-item">
@@ -47,13 +55,12 @@
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
-        Contact
+        Special Interior Request
       </div>
       <li class="nav-item">
         <span>
         <a class="nav-link collapsed" href="interior.php">Special Interior</a></span>
       </li>
-      <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu -->
       <!--<li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
