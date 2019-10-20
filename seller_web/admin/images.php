@@ -74,6 +74,9 @@ $email = $_SESSION['logged_in_user'];
                 <th>Company Name</th>
                 <th>Product Title</th>
                 <th>Description</th>
+                <th>Length x Breath</th>
+                <th>Material</th>
+                <th>Orientation</th>
                 <th>Price</th>
                 <th>Initial Count</th>
                 <th>Current Count</th>
@@ -97,6 +100,9 @@ $email = $_SESSION['logged_in_user'];
                     <td><?php echo $row['company_name'] ?></td>
                     <td><?php echo $row['title'] ?></td>
                     <td><?php echo $row['description'] ?></td>
+                    <td><?php echo $row['length'] . "X" . $row['breath'] ?></td>
+                    <td><?php echo $row['materail'] ?></td>
+                    <td><?php echo $row['orientation'] ?></td>
                     <td><?php echo $row['price'] ?></td>
                     <td><?php echo $row['init_quant'] ?></td>
                     <td><?php echo $row['curr_quant'] ?></td>
@@ -127,12 +133,15 @@ $email = $_SESSION['logged_in_user'];
           <tfoot>
             <thead>
               <tr>
-                <th>Timestamp</th>
+              <th>Timestamp</th>
                 <th>#</th>
                 <th>Name</th>
                 <th>Company Name</th>
                 <th>Product Title</th>
                 <th>Description</th>
+                <th>Length x Breath</th>
+                <th>Material</th>
+                <th>Orientation</th>
                 <th>Price</th>
                 <th>Initial Count</th>
                 <th>Current Count</th>
