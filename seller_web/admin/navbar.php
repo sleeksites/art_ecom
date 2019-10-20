@@ -3,7 +3,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./">
         <div class="sidebar-brand-icon">
-          <img src="../logo.jpeg" height="40" width="40">
+          <img src="../logo.jpeg" height="40" width="40" style="border-radius:50%;">
         </div>
         <div class="sidebar-brand-text mx-3">Admin Panel</div>
       </a>
