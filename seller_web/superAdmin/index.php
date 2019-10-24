@@ -5,7 +5,7 @@ if (!isset($_SESSION['is_Admin']) && ($_SESSION['is_Admin'] != 1))
 {
   ?>
 		<script>
-		window.location="superAdmin/login/";
+		window.location="./login/";
 		</script>
 		<?php
 }

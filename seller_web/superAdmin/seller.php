@@ -46,6 +46,9 @@ $email = "ADMIN"
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.19/b-1.5.6/sl-1.3.0/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
 
@@ -77,6 +80,13 @@ $email = "ADMIN"
                 <th>City</th>
                 <th>Pincode</th>
                 <th>Email</th>
+                <th>Acc Holder Name</th>
+                <th>Account Type</th>
+                <th>Account Number</th>
+                <th>IFSC</th>
+                <th>PAN</th>
+                <th>GSTIN</th>
+                <th>Sign</th>
                 <th>Products</th>
               </tr>
             </thead>
@@ -99,6 +109,13 @@ $email = "ADMIN"
                     <td><?php echo $row['city'] ?></td>
                     <td><?php echo $row['pincode'] ?></td>
                     <td><?php echo $row['email'] ?></td>
+                    <td><?php echo $row['acc_holder_name'] ?></td>
+                    <td><?php echo $row['acc_type'] ?></td>
+                    <td><?php echo $row['acc_number'] ?></td>
+                    <td><?php echo $row['ifsc'] ?></td>
+                    <td><?php echo $row['pan'] ?></td>
+                    <td><?php echo $row['gstin'] ?></td>
+                    <td><?php echo "<img src=".$row['sign_link'].">"; ?></td>
                     <td><a href="sellerImages.php?email=<?php echo $row['email']?>">Products</a></td>
                   </tr>
                 <?php
@@ -112,7 +129,7 @@ $email = "ADMIN"
             }
           ?>
           </tbody>
-          <tfoot>
+          <!-- <tfoot>
             <tr>
                 <th>Timestamp</th>
                 <th>#</th>
@@ -123,9 +140,17 @@ $email = "ADMIN"
                 <th>City</th>
                 <th>Pincode</th>
                 <th>Email</th>
+                <th>Acc Holder Name</th>
+                <th>Account Type</th>
+                <th>Account Number</th>
+                <th>IFSC</th>
+                <th>PAN</th>
+                <th>GSTIN</th>
+                <th>Sign</th>
                 <th>Products</th>
+                <th>Action</th>
               </tr>
-          </tfoot>
+          </tfoot> -->
           </table>
           <br>
           <br>
@@ -165,6 +190,49 @@ $email = "ADMIN"
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 
+   <script src="js/jquery.tabledit.js"></script>
+ <script type="text/javascript">
+    $('#order_table').Tabledit({
+    url: 'example.php',
+    columns: {
+        identifier: [1, 'id'],
+        editable: [[2, 'name'],[3, 'address'],[4, 'gender'],[5, 'state'],[6, 'city'],[7, 'pincode'],[8, 'email'],[9,'acc_holder_name'],[10,'acc_type'],[11,'acc_number'],[12,'ifsc'],[13,'pan'],[14,'gstin']]
+    },
+    onDraw: function() {
+        console.log('onDraw()');
+    },
+    onSuccess: function(data, textStatus, jqXHR) {
+        console.log('onSuccess(data, textStatus, jqXHR)');
+        console.log(data);
+        console.log(textStatus);
+        console.log(jqXHR);
+    },
+    onFail: function(jqXHR, textStatus, errorThrown) {
+        console.log('onFail(jqXHR, textStatus, errorThrown)');
+        console.log(jqXHR);
+        console.log(textStatus);
+        console.log(errorThrown);
+    },
+    onAlways: function() {
+        console.log('onAlways()');
+    },
+    onAjax: function(action, serialize) {
+        console.log('onAjax(action, serialize)');
+        console.log(action);
+        $.ajax({
+          url: "./seller_info_edit.php",
+          type: "post",
+          data: serialize,
+          success: function(d)
+          {
+            location.reload();
+          }
+        });
+    }
+});
+  </script>
+
+ 
 </body>
 
 </html>
