@@ -43,12 +43,27 @@ $email = $_SESSION['logged_in_user'];
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
+
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.4/dt-1.10.19/b-1.5.6/sl-1.3.0/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+<!-- 
 
+    <style type="text/css" media="screen">
+      input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
+      .glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;}
+      .glyphicon-pencil:before{content:"\270f";}
+      .glyphicon-trash:before{content:"\e020";}
+    </style> -->
 </head>
 
 <body id="page-top">
@@ -62,7 +77,7 @@ $email = $_SESSION['logged_in_user'];
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="text-align: center;margin:auto;">
-          <h1>The Products Currently for Sale</h1>
+          <h1>The Products Currently for Sale </h1>
           <div class="row">
           <br>
           <table class="table table-condensed table-responsive table-hover" id="order_table">
@@ -74,7 +89,8 @@ $email = $_SESSION['logged_in_user'];
                 <th>Company Name</th>
                 <th>Product Title</th>
                 <th>Description</th>
-                <th>Length x Breath</th>
+                <th>Length</th>
+                <th>Breadth</th>
                 <th>Material</th>
                 <th>Orientation</th>
                 <th>Price</th>
@@ -100,8 +116,9 @@ $email = $_SESSION['logged_in_user'];
                     <td><?php echo $row['company_name'] ?></td>
                     <td><?php echo $row['title'] ?></td>
                     <td><?php echo $row['description'] ?></td>
-                    <td><?php echo $row['length'] . "X" . $row['breath'] ?></td>
-                    <td><?php echo $row['materail'] ?></td>
+                    <td><?php echo $row['length']  ?></td>
+                    <td><?php echo $row['breath'] ?></td>
+                    <td><?php echo $row['material'] ?></td>
                     <td><?php echo $row['orientation'] ?></td>
                     <td><?php echo $row['price'] ?></td>
                     <td><?php echo $row['init_quant'] ?></td>
@@ -188,6 +205,69 @@ $email = $_SESSION['logged_in_user'];
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="js/jquery.tabledit.js"></script>
+
+<?php  
+/*
+          $q = "select category,id from category_table";
+
+          $r = $con->query($q);
+          $r = $r->fetch_all();
+          $cat = [];
+          foreach($r as $row)
+          {
+            print_r($row);
+            $cat[$row[1]] = $row[0];
+          }
+          print_r($cat);
+          $categories = json_encode($cat);*/
+
+
+    ?>
+
+  <script type="text/javascript">
+    $('#order_table').Tabledit({
+    url: 'example.php',
+    hideIdentifier: true,
+    columns: {
+        identifier: [1, 'id'],
+        editable: [[2, 'name'],[3, 'company_name'],[4, 'product_title'],[5, 'description'],[6, 'length'],[7, 'breath'],[8, 'material'],[12, 'current_quant']]
+    },
+    onDraw: function() {
+        console.log('onDraw()');
+    },
+    onSuccess: function(data, textStatus, jqXHR) {
+        console.log('onSuccess(data, textStatus, jqXHR)');
+        console.log(data);
+        console.log(textStatus);
+        console.log(jqXHR);
+    },
+    onFail: function(jqXHR, textStatus, errorThrown) {
+        console.log('onFail(jqXHR, textStatus, errorThrown)');
+        console.log(jqXHR);
+        console.log(textStatus);
+        console.log(errorThrown);
+    },
+    onAlways: function() {
+        console.log('onAlways()');
+    },
+    onAjax: function(action, serialize) {
+        console.log('onAjax(action, serialize)');
+        console.log(action);
+        $.ajax({
+          url: "./edit_image_table.php",
+          type: "post",
+          data: serialize,
+          success: function(d)
+          {
+            location.reload();
+          }
+        });
+        console.log(serialize);
+    }
+});
+  </script>
 
 </body>
 
