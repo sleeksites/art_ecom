@@ -4,9 +4,9 @@
 	<title>TEST PAGE</title>
 </head>
 <body>
-	<form action="./api/infiniteAPI.php" method="POST">
-		<input type="text" name="id">
-		<input type="text" name="table">
+	<form action="./api/createpdfAPI.php" method="POST">
+		<input type="text" name="data">
+		<input type="text" name="id_quant">
 		<button>Submit</button>
 	</form>
 </body>
