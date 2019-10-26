@@ -5,8 +5,7 @@
 </head>
 <body>
 	<form action="./api/createpdfAPI.php" method="POST">
-		<input type="text" name="data">
-		<input type="text" name="id_quant">
+		<input type="text" name="oid">
 		<button>Submit</button>
 	</form>
 </body>
