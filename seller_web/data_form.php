@@ -38,7 +38,7 @@ if(!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in']!=1)
 				<div class="col-lg-4 col-md-6 mb-3 form-group">
 					<span style="display:flex;">
 						<input type="text" name="length" placeholder="Length" required class="col form-control" required>
-						X
+						<div class="col" style="text-align:center;margin:auto;">X</div>
 						<input type="text" name="breath" placeholder="Breath" required class="col form-control" required>
 					</span>
 				</div>

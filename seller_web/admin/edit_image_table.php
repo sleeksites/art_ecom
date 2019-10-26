@@ -20,6 +20,4 @@ else if($_POST["action"]=="delete")
 {
 	echo "delete called";
 }
-
-
 ?>
