@@ -29,8 +29,8 @@
 		}
 	}
 	?>
-		<!-- <script>
+		<script>
 		window.location="login/";
-		</script> -->
+		</script>
 	<?php
 ?>	
